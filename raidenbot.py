@@ -13,7 +13,6 @@ import asyncio
 
 
 client = commands.Bot(command_prefix='$')
-token = 'ODkwMzYxMzQ4ODM4NTIyOTUz.YUurnw.Jl4kLMNwi_AWar8nBndeLmPKrbQ'
 delta = datetime.datetime(2022, 11, 24) - datetime.datetime.now()
 beta = datetime.datetime.now()
 
@@ -690,7 +689,7 @@ async def roll(ctx, text):
         embed.set_footer(text="Created by Lightdoc")
         await ctx.send(embed=embed)
     
-client.run(token)
+client.run(os.environ['token'])
 
 
 #기본색 0x1800d1
